@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="https://seeklogo.com/images/N/Neon_Genesis_Evangelion-logo-B4E0C643B0-seeklogo.com.png">
+    <title>Raven's Nest</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+</head>
+
+<body>
+
+    </div>
+    <!-- MAIN THINGS -->
+    <h1 class="Main_text blur" id="Main_text">Web Programing Exercise Homepage</h1>
+
+    <div id="BUTTONS_LEFTTOP">
+        <div class="Menu_Button blur" id="Menu_Button">
+            <button onclick="Open_menu()"> Homework List </button>
+        </div>
+
+        <div class="Menu_Button blur" id="About_Button">
+            <button onclick="Open_Aboutmenu()"> About me </button>
+        </div>
+    </div>
+
+    <div class="Weather_info blur" id="Weather_info">
+        <p id="Date">Unknown</p>
+        <p id="Temp"> 100°C </p>
+        <p id="Humidity"> 0% </p>
+        <p id="Forecast"> Hell Fires on Rubicon 3</p>
+    </div>
+
+    <div id="blockfilter"> </div>
+
+    <!-- Menu Modal -->
+    <div id="Menu" class="modal_menu">
+        <!-- Modal content -->
+        <div class="modal-content" id="modal_content">
+            <span class="close" id="close_menu">&times;</span>
+            <p>List of all of my Homework..</p>
+            <a href="https://sjnosukequy.onrender.com/Tuan2"> <button class="HWBUTT"> Tuan 2 </button> </a>
+            <a href="https://sjnosukequy.onrender.com/Tuan4"> <button class="HWBUTT"> Tuan 4 </button> </a>
+        </div>
+    </div>
+
+    <!-- About me -->
+    <div id="About_me">
+        <!-- Modal content -->
+        <div class="modal_About" id="modal_About">
+            <span class="close" id="close_About">&times;</span>
+            <div display="textleft">
+                <h4>Hey there! 👋🏻 </h4>
+                <h4>I'm Vuong Dinh Quy </h4>
+                <p>21110795@student.hcmute.edu.vn</p>
+                <p>MSSV: 21110795</p>
+                <p class="quote">"I won't stop!
+                    I'll chase the clouds from over Rubicon...
+                    Only I can fly high enough!"
+                    V.IV Rusty</p>
+                <a href="https://github.com/sjnosukequy"> <img
+                        src="https://cdn-icons-png.flaticon.com/512/733/733553.png"> </a>
+                <a href="https://www.facebook.com/profile.php?id=100011180799757"> <img
+                        src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"> </a>
+            </div>
+
+            <div display="textright">
+                <img src="https://i.postimg.cc/cH4tVvSz/image.png" id="avatar">
+            </div>
+        </div>
+    </div>
+
+    <!-- MENU Handlers -->
+    <script>
+        var modal_con = document.getElementById("modal_content");
+        var blockfilter = document.getElementById("blockfilter");
+        var Abmodal_con = document.getElementById("modal_About");
+        const nodeList = document.querySelectorAll(".blur");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("close_menu");
+        var Abspan = document.getElementById("close_About");
+
+        // When Click on the button
+        function Open_menu() {
+            modal_con.style.left = "0";
+            blockfilter.style.visibility = "visible";
+            for (let i = 0; i < nodeList.length; i++) {
+                nodeList[i].style.filter = "blur(4px)";
+            }
+        }
+
+        function Open_Aboutmenu() {
+            blockfilter.style.visibility = "visible";
+            Abmodal_con.style.opacity = "1";
+            Abmodal_con.style.visibility = "visible";
+            for (let i = 0; i < nodeList.length; i++) {
+                nodeList[i].style.filter = "blur(4px)";
+            }
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal_con.style.left = "-500px";
+            blockfilter.style.visibility = "hidden";
+            for (let i = 0; i < nodeList.length; i++) {
+                nodeList[i].style.filter = "none";
+            }
+        }
+
+        Abspan.onclick = function () {
+            Abmodal_con.style.opacity = "0";
+            Abmodal_con.style.visibility = "hidden";
+            blockfilter.style.visibility = "hidden";
+            for (let i = 0; i < nodeList.length; i++) {
+                nodeList[i].style.filter = "none";
+            }
+        }
+
+        window.onclick = function (event) {
+            if (event.target == blockfilter) {
+                Abmodal_con.style.opacity = "0";
+                Abmodal_con.style.visibility = "hidden";
+                modal_con.style.left = "-500px";
+                blockfilter.style.visibility = "hidden";
+                for (let i = 0; i < nodeList.length; i++) {
+                    nodeList[i].style.filter = "none";
+                }
+            }
+        }
+    </script>
+
+    <!-- Weather-info Handler -->
+    <script src="./test.js"> </script>
+</body>
+
+</html>

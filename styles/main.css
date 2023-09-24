@@ -1,0 +1,228 @@
+* {
+    font-family: monospace, monospace;
+}
+
+/* COLOR PALLETE */
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: #3297fd;
+}
+
+::selection {
+    color: white;
+    background: #3297fd;
+}
+
+[class *="blur"] {
+    transition: filter 1s;
+}
+
+/* MAIN PARTS */
+body {
+    background: url("https://cdna.artstation.com/p/assets/images/images/065/297/714/large/iyenss-ac.jpg?1690009374");
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+    
+}
+
+#Main_text {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 50vh;
+    width: 100%;
+    font-size: calc(30px + 0.4vw); 
+}
+
+#BUTTONS_LEFTTOP {
+    position: absolute;
+    left: 2vw;
+    top: 3vh;
+}
+
+#Menu_Button {
+    margin-bottom: 15px;
+}
+
+#Weather_info {
+    color: white;
+    position: absolute;
+    bottom: 1vh;
+    left: 2vw;
+    font-size: 20px;
+    width: auto;
+}
+#Date
+{
+    margin-bottom: 0px;
+}
+[id="Temp"] {
+    position: relative;
+    float: left;
+    margin-right: 30px;
+}
+
+[id="Humidity"] {
+    overflow: hidden;
+}
+
+/* BUTTONS */
+[class="HWBUTT"] {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+button {
+    border-radius: 4px !important;
+    transition: background 0.5s;
+    border-style: none !important;
+    border-color: transparent !important;
+    font-size: 20px;
+}
+
+button:hover {
+    background: #3297fd !important;
+    color: white;
+    cursor: pointer;
+}
+
+[id="blockfilter"] {
+    position: fixed;
+    top: 0;
+    background: rgb(0, 0, 0, 0);
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* MODAL */
+[id="modal_content"] {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: rgb(255, 255, 255) !important;
+    padding: 30px 10px;
+    width: 20vw !important;
+    height: 100vh;
+    top: 0vh;
+    left: -500px;
+    max-height: 100vh !important;
+    overflow: auto !important;
+    transition: left 0.7s;
+    min-width: 250px !important;
+}
+
+[class="close"] {
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#modal_About > span
+{
+  right: 2%;
+  top: 2%;
+}
+
+[class="close"]:hover,
+[class="close"]:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+ /* Modal About me content*/
+[id="modal_About"]
+  {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: rgb(255, 255, 255) !important;
+    padding: 0px 20px;
+    width: 52vw;
+    height: 52vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100% !important;
+    overflow: auto;
+    transition: opacity 0.5s, visibility 0.5s;
+    border-radius: 3vh;
+  }
+
+  [display = "textleft"]
+  {
+    float: left;
+    padding-left: 10px;
+    width: 45% !important;
+    font-size:calc(12px + 0.4vw); 
+  }
+
+  [class="quote"]
+  {
+    width: 150%;
+    white-space: pre-line;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  [display = "textleft"] img
+  {
+    float: left;
+    margin-right: 2vw;
+    width: 3vw;
+    height: 3vw;
+    min-width: 30px;
+    min-height: 30px;
+    margin-bottom: 5px;
+  }
+
+  [display="textright"]
+  {
+    
+    float: right;
+    padding: 30px 40px;
+  }
+
+  [display="textright"] img
+  {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10vh;
+    min-width: 150px;
+    min-height: 150px;
+  }
+
+  /* SCROLL BAR */
+  /* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

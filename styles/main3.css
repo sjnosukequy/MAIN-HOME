@@ -1,0 +1,215 @@
+*{
+    font-family: monospace, monospace;
+    font-size:calc(10px + 0.4vw);
+}
+/* COLOR PALLETE */
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #3297fd;
+}
+
+::selection {
+  color: white;
+  background: #3297fd;
+}
+
+body {
+    background: black;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+    filter: blur(8px);
+    transition: filter 1s;
+}
+h1[id="Main_text"]
+{
+    position: absolute;
+    top: 45vh;
+    left: 25vw;
+    color: white;
+    white-space: pre-line;
+    
+    width: 720px;
+    max-width: calc(100% - 250px);
+}
+/* weather info */
+div[class="Weather_info"]
+{
+    color: white;
+    position: fixed;
+    top: 80vh;
+    left: 2vh;
+}
+[id ="Temp"]
+{
+  float: left;
+  margin-right: 30px;
+}
+[id = "Humidity"]
+{
+  overflow: hidden;
+}
+
+/* Menu_button */
+[id="Menu_Button"]
+{
+    position: absolute;
+    top: 0;
+    margin-top: calc(1.7vh + 0.2vw);
+    left: 1vw;
+    font-size: larger;
+}
+[id="About_Button"]
+{
+    position: absolute;
+    top: 0;
+    margin-top: calc(6.5vh + 0.7vw);
+    left: 1vw;
+    font-size: larger;
+}
+
+[id="Main_page"]
+{
+  transition: filter 1s; 
+}
+
+.Menu
+{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+/* BUTTONS */
+[class="HWBUTT"]
+{
+  margin-bottom: 10px;
+}
+button
+{
+  border-radius: 4px !important;
+  transition: background 0.5s;
+  border-style: none !important;
+  border-color: transparent !important;
+}
+button:hover
+{
+  background: #3297fd !important;
+  color: white;
+}
+
+/* Modal Content */
+[id="modal_content"] {
+    background: rgba(0, 0, 0, 0.9) !important;
+    color: rgb(255, 255, 255) !important;
+    padding: 60px 10px;
+    width: 20% !important;
+    height:110vh;
+    left: -500px;
+    max-height: 100% !important;
+    overflow: auto !important;
+    transition: left 0.5s;
+    min-width: 250px !important;
+  }
+  @-webkit-keyframes animateleft {
+    from {left:-300px; opacity:0} 
+    to {left:0; opacity:1}
+  }
+  
+  @keyframes animateleft {
+    from {left:-300px; opacity:0}
+    to {left:0; opacity:1}
+  }
+
+  /* close button */
+  [class="close"]
+  {
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  #modal_About > span
+  {
+    right: 2%;
+  }
+
+  [class="close"]:hover, [class="close"]:focus
+  {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Modal About me content*/
+  [id="modal_About"]
+  {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    color: rgb(255, 255, 255) !important;
+    padding: 20px 20px;
+    width: 50vw;
+    height:50vh;
+    left: 25vw;
+    top: 20vh;
+    max-height: 100% !important;
+    overflow-y:auto;
+    overflow-x: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    border-radius: 3vh;
+  }
+  [class="Main_content"]
+  {
+    color: #3297fd !important;
+  }
+  [display = "textleft"]
+  {
+    float: left;
+    width: 40vh !important;    
+  }
+
+  [class="quote"]
+  {
+    width: 40vw;
+    white-space: pre-line;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  [display = "textleft"] img
+  {
+    float: left;
+    margin-right: 2vw;
+    width: 3vw;
+    height: 3vw;
+    min-width: 30px;
+    min-height: 30px;
+    margin-bottom: 5px;
+  }
+
+  [display="textright"]
+  {
+    float: right;
+    padding: 5px 25px;
+  }
+
+  [display="textright"] img
+  {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10vh;
+    min-width: 150px;
+    min-height: 150px;
+  }
